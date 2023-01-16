@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>CODEPRESSO</title>
+</head>
+<body>
+<div id="wrapper">
+    <div class="lectureHeader taskTestHeader">
+        <div class="topArea">
+            <h1><img src="../images/logo.svg" alt="코드프레소 로고"></h1>
+            <!--라이트모드 다크모드-->
+            <input type="checkbox" onclick="checkActive()" class="switch">
+            <!-- 가이드 버튼 -->
+            <div class="guideBtn">?</div>
+            <div class="btnArea">
+                <div class="topBtn prevBtn"></div>
+                <div class="topBtn nextBtn"></div>
+            </div>
+        </div>
+        <div class="skillProgress">
+            <h3>Skill title</h3>
+            <div class="taskArea">
+                <ul>
+                    <!-- 완료한 태스크 complete 클래스 주세요 -->
+                    <li class="complete"></li>
+                    <!-- 현재 위치한 태스크 active 클래스 주세요 -->
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li class="count">1/4</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 태스크 테스트 시 testCode 클래스 추가해 주세요 -->
+    <div class="lectureMiddle testCode">
+        <!-- 태스크 테스트 시 testMiddle 클래스 추가해 주세요 -->
+        <div class="lectureContent testMiddle">
+            <!--blurPopup 사용 시 코드 영역에 noScroll 클래스 사용해주세요-->
+            <div class="codeArea scrollBar noScroll">
+                <!-- 객관식 영역 -->
+                <div class="containerTestMain scrollY">
+                    <div class="prevBtn"><span><img src="../images/selectNext.svg" alt="prev button"></span>Previous</div>
+                    <div class="question">Which metric an be used to evaluate the performance of a classification model?</div>
+                    <ul class="choiceList">
+                        <!-- correct 클래스 있을 때 정답 표시 -->
+                        <li class="correct">
+                            <input type="checkbox" id="choice1">
+                            <label for="choice1"><div>Mean absolute error</div> <span>1</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="choice2">
+                            <label for="choice2"><div>Mean absolute error</div> <span>2</span></label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="choice3">
+                            <label for="choice3"><div>Mean absolute error</div> <span>3</span></label>
+                        </li>
+                        <li class="disabled">
+                            <input type="checkbox" id="choice4">
+                            <label for="choice4"><div>Mean absolute error</div> <span>4</span></label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--            <div class="lectureMenu">-->
+            <!--                &lt;!&ndash;영역 조정 bar&ndash;&gt;-->
+            <!--                <div class="lineBar"></div>-->
+            <!--                <div class="sideMenu codeOutputWrap scrollY">-->
+            <!--                    <div class="topArea">-->
+            <!--                        <div class="exit"></div>-->
+            <!--                        <ul class="tabMenu">-->
+            <!--                            <li class="active">OutPut</li>-->
+            <!--                            <li>Problems</li>-->
+            <!--                        </ul>-->
+            <!--                        <div class="viewImage">-->
+            <!--                            View Image-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                    <div class="codeOutputMenu">-->
+            <!--                        <div class="codeAreaMenu scrollY">-->
+            <!--                            &lt;!&ndash;에디터 영역&ndash;&gt;-->
+            <!--                            <div>-->
+            <!--                                d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>d<br>ddddddddddddddddddddddddddddddddddddddddddddddddddddddddd-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                        <div class="imgArea scrollY">-->
+            <!--                            <div class="lineBarX"></div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+        <!--lectureMenu 펼쳐지면 active 클래스 추가해 주세요-->
+        <div class="fixedMenu">
+            <ul>
+                <li>
+                    <div class="menuName courseMenu">Course Outline</div>
+                    <div class="iconArea courseIcon"></div>
+                </li>
+                <li>
+                    <div class="menuName descriptionMenu">Description</div>
+                    <div class="iconArea descriptionIcon"></div>
+                </li>
+                <li>
+                    <div class="menuName codeMenu">Output</div>
+                    <div class="iconArea codeIcon"></div>
+                </li>
+                <li>
+                    <div class="menuName answerMenu">Correct Answer</div>
+                    <div class="iconArea answerIcon"></div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="lectureFooter">
+        <div class="btnArea">
+            <div class="footerBtn answerBtn">
+                Submit Answer
+            </div>
+        </div>
+    </div>
+
+    <!--객관식 오답 choiceWrong 클래스 추가-->
+    <div class="onBoardingWrap choiceWrong2">
+        <div class="onBoarding">
+            <div class="linerBox">
+
+                <div class="onBoardBox guide">
+                    <div class="topArea">
+                        <div class="title">View Correct Answer</div>
+                        <div class="step">24/26</div>
+                        <!--닫기 버튼-->
+                        <div class="exit"></div>
+                    </div>
+                    <p>Click the Run Code button to run your well-written code.</p>
+                    <div class="btnArea">
+                        <div class="btn prevBtn">Previous</div>
+                        <div class="btn nextBtn">Next</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="onBoardingLineBox">
+            <div class="clearBox">
+
+                <div class="guideBox">
+                    <div class="title">Incorrect answer on multiple choice</div>
+                    <p>Guide</p>
+                    <div class="blueBtn">
+                        View Correct Answer
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    /* 다크모드 라이트모드 */
+    const lecture = document.querySelector('#wrapper');
+    const toggleSwitch = document.querySelector('.switch');
+
+    function checkActive(){
+        lecture.classList.toggle('is-active');
+        toggleSwitch.classList.toggle('is-active');
+        console.log('checked');
+    }
+</script>
+</body>
+</html>
